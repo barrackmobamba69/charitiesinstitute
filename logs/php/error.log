@@ -161,3 +161,40 @@
 [18-Mar-2024 23:28:29 UTC] [Image Optimizer]: error in ImageOptimization\Modules\Oauth\Components\Connect::check_connect_status(): Status check error. Reason: Activation Request Failed!: Invalid activation
 [18-Mar-2024 23:28:34 UTC] [Image Optimizer]: error in ImageOptimization\Modules\Oauth\Components\Connect::check_connect_status(): Status check error. Reason: Activation Request Failed!: Invalid activation
 [19-Mar-2024 00:04:58 UTC] PHP Warning:  Array to string conversion in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\elementor\modules\ai\connect\ai.php on line 98
+[19-Mar-2024 16:39:51 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, string given in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php:540
+Stack trace:
+#0 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php(540): array_key_exists('cancel', '')
+#1 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\tasks\class-ss-task.php(46): Simply_Static\Util::add_archive_status_message('', 'cancel', 'Cancelling job')
+#2 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\tasks\class-ss-cancel-task.php(22): Simply_Static\Task->save_status_message('Cancelling job')
+#3 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-archive-creation-job.php(150): Simply_Static\Cancel_Task->perform()
+#4 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\vendor\a5hleyrich\wp-background-processing\classes\wp-background-process.php(516): Simply_Static\Archive_Creation_Job->task('cancel')
+#5 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\vendor\a5hleyrich\wp-background-processing\classes\wp-background-process.php(333): WP_Background_Process->handle()
+#6 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-includes\class-wp-hook.php(324): WP_Background_Process->maybe_handle('')
+#7 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wp_arch...')
+#10 {main}
+  thrown in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php on line 540
+[19-Mar-2024 16:39:56 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, string given in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php:540
+Stack trace:
+#0 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php(540): array_key_exists('error', '')
+#1 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-options.php(195): Simply_Static\Util::add_archive_status_message('', 'error', 'Error: (1) Unca...')
+#2 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-archive-creation-job.php(318): Simply_Static\Options->add_status_message('Error: (1) Unca...', 'error')
+#3 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-archive-creation-job.php(381): Simply_Static\Archive_Creation_Job->save_status_message('Error: (1) Unca...', 'error')
+#4 [internal function]: Simply_Static\Archive_Creation_Job->shutdown_handler()
+#5 {main}
+  thrown in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php on line 540
+[19-Mar-2024 16:40:01 UTC] PHP Fatal error:  Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, string given in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php:540
+Stack trace:
+#0 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php(540): array_key_exists('cancel', '')
+#1 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\tasks\class-ss-task.php(46): Simply_Static\Util::add_archive_status_message('', 'cancel', 'Cancelling job')
+#2 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\tasks\class-ss-cancel-task.php(22): Simply_Static\Task->save_status_message('Cancelling job')
+#3 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-archive-creation-job.php(150): Simply_Static\Cancel_Task->perform()
+#4 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\vendor\a5hleyrich\wp-background-processing\classes\wp-background-process.php(516): Simply_Static\Archive_Creation_Job->task('cancel')
+#5 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\vendor\a5hleyrich\wp-background-processing\classes\wp-background-process.php(333): WP_Background_Process->handle()
+#6 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-includes\class-wp-hook.php(324): WP_Background_Process->maybe_handle('')
+#7 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#8 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-admin\admin-ajax.php(188): do_action('wp_ajax_wp_arch...')
+#10 {main}
+  thrown in C:\Users\UDAYY\Local Sites\charitiesinstitute\app\public\wp-content\plugins\simply-static\src\class-ss-util.php on line 540
